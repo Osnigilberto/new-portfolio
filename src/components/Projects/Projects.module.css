@@ -263,6 +263,59 @@
     height: 200px;
   }
 
+  /* Container da imagem */
+.projectImage {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+/* Container da imagem - com fundo branco para logos transparentes */
+.projectImageWhite {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: white; /* ✅ Fundo branco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+/* Placeholder da imagem */
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #1a1340 100%);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Imagem do projeto usando Next.js Image */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+/* Imagem com fundo branco - ajusta object-fit */
+.projectImageWhite .image {
+  object-fit: contain; /* ✅ Contain ao invés de cover */
+  padding: var(--spacing-md);
+}
+
+.projectCard:hover .image {
+  transform: scale(1.05);
+}
+
   .projectContent {
     padding: var(--spacing-md);
   }
