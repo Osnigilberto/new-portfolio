@@ -1,0 +1,352 @@
+/* Container principal de Contact */
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+/* Container de conteúdo */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Título da seção */
+.sectionTitle {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+/* Linha decorativa abaixo do título */
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Descrição da seção */
+.sectionDescription {
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-secondary);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+/* Grid de conteúdo (info + formulário) */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  width: 100%;
+}
+
+/* Coluna de informações de contato */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Título da seção de info */
+.infoTitle {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Descrição da info */
+.infoDescription {
+  font-size: 1.125rem;
+  color: var(--color-secondary);
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Container dos métodos de contato */
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* Método de contato individual */
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: #f0fdfb;
+  border-radius: var(--border-radius-md);
+  border: 2px solid transparent;
+  transition: all var(--transition-normal);
+}
+
+.contactMethod:hover {
+  border-color: var(--color-accent);
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+  opacity: 1;
+}
+
+/* Ícone do método */
+.methodIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  flex-shrink: 0;
+}
+
+/* Info do método */
+.methodInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Label do método */
+.methodLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Valor do método */
+.methodValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* Container do formulário */
+.formContainer {
+  background: #f0fdfb;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border: 2px solid rgba(35, 25, 79, 0.1);
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Grupo de campo do formulário */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+/* Label do campo */
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+/* Input de texto */
+.input {
+  padding: var(--spacing-md);
+  border: 2px solid rgba(35, 25, 79, 0.2);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-secondary);
+  background: var(--color-primary);
+  transition: all var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.1);
+}
+
+/* Textarea */
+.textarea {
+  padding: var(--spacing-md);
+  border: 2px solid rgba(35, 25, 79, 0.2);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-secondary);
+  background: var(--color-primary);
+  transition: all var(--transition-fast);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.1);
+}
+
+/* Botão de envio */
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submitButton svg {
+  transition: transform var(--transition-fast);
+}
+
+.submitButton:hover:not(:disabled) svg {
+  transform: translateX(3px);
+}
+
+/* Mensagem de sucesso */
+.successMessage {
+  padding: var(--spacing-md);
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mensagem de erro */
+.errorMessage {
+  padding: var(--spacing-md);
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+  border-top: 2px solid rgba(35, 25, 79, 0.1);
+}
+
+/* Texto do footer */
+.footerText {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-secondary);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 968px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .contactInfo {
+    order: 2;
+  }
+
+  .formContainer {
+    order: 1;
+  }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 640px) {
+  .contact {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .sectionDescription {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .infoTitle {
+    font-size: 1.5rem;
+  }
+
+  .infoDescription {
+    font-size: 1rem;
+  }
+
+  .formContainer {
+    padding: var(--spacing-lg);
+  }
+
+  .contactMethod {
+    padding: var(--spacing-sm);
+  }
+
+  .methodIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer {
+    padding-top: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+  }
+
+  .footerText {
+    font-size: 0.85rem;
+  }
+}
