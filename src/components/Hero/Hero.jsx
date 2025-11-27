@@ -11,7 +11,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Delay entre cada filho
+        staggerChildren: 0.2,
         delayChildren: 0.3
       }
     }
@@ -61,23 +61,23 @@ const Hero = () => {
             FERREIRA JUNIOR
           </motion.h1>
           
-          {/* Subtítulo/Cargo */}
+          {/* Subtítulo/Cargo - ATUALIZADO ✅ */}
           <motion.p 
             className={styles.subtitle}
             variants={itemVariants}
           >
-            FRONTEND DEVELOPER
+            WEB/MOBILE DEVELOPER
           </motion.p>
           
-          {/* Descrição */}
+          {/* Descrição - ATUALIZADA ✅ */}
           <motion.p 
             className={styles.description}
             variants={itemVariants}
           >
-            I am a frontend developer with experience in HTML, CSS, JavaScript and React, 
-            passionate about transforming ideas into interactive and intuitive interfaces. 
-            With solid skills in responsive design and usability, I create solutions that 
-            combine aesthetics and performance, providing optimized user experiences.
+            I am a web and mobile developer with expertise in React, Next.js, Kotlin, 
+            and Firebase. I build complete digital solutions from concept to deployment, 
+            creating responsive web applications and native mobile apps. Passionate about 
+            transforming ideas into interactive, high-performance experiences across all platforms.
           </motion.p>
           
           {/* Links sociais */}
@@ -151,16 +151,14 @@ const Hero = () => {
             </a>
           </motion.div>
           
-          {/* Botões de ação (CTA - Call to Action) */}
+          {/* Botões de ação */}
           <motion.div 
             className={styles.cta}
             variants={itemVariants}
           >
-            {/* Botão para ir até a seção de contato */}
             <a href="#contact" className={styles.primaryButton}>
               Get in Touch
             </a>
-            {/* Botão para ver o currículo em PDF */}
             <a href="/CV EN.pdf" target="_blank" rel="noopener noreferrer" className={styles.secondaryButton}>
               View Resume
             </a>
@@ -175,7 +173,6 @@ const Hero = () => {
           animate="visible"
         >
           <div className={styles.imageWrapper}>
-            {/* Imagem otimizada com Next.js Image */}
             <Image 
               src="/logo-portfolio1.png" 
               alt="Osni Gilberto Ferreira Junior" 
@@ -188,7 +185,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll indicator - indicador de scroll */}
+      {/* Scroll indicator */}
       <motion.div 
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
