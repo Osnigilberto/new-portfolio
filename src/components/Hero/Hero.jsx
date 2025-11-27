@@ -174,10 +174,10 @@ const Hero = () => {
         >
           <div className={styles.imageWrapper}>
             <Image 
-              src="/logo-portfolio1.png" 
+              src="/image-profile1.png" 
               alt="Osni Gilberto Ferreira Junior" 
-              width={600}
-              height={600}
+              width={900}
+              height={900}
               priority
               className={styles.profileImage}
             />
